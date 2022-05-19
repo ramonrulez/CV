@@ -1,0 +1,212 @@
+\documentclass[11]{article}
+
+%	Encoding
+\usepackage[utf8]{inputenc}
+
+%	Language
+\usepackage[english]{babel}
+
+%	Blindtext
+\usepackage{blindtext}
+
+%	Font
+%\renewcommand{\familydefault}{\sfdefault}
+%\renewcommand*\sfdefault{phv}
+\usepackage[T1]{fontenc}
+\usepackage{arev}
+
+%	Layout
+\usepackage{geometry}
+\geometry{
+	a4paper,
+	left=20mm,
+	%right=
+	%bottom=
+	top=15mm
+}
+
+%	Remove page's headers, footers, pagenumbers
+\pagestyle{empty}
+
+%	Custom section's style
+\usepackage{sectsty}
+\sectionfont{
+	\sectionrule{0pt}{0pt}{-5pt}{1pt}
+}
+%	List package
+\usepackage{enumitem}
+
+%	Multiple columns
+\usepackage{multicol}
+
+%----------------------------------------------------------------------------------------
+
+%%	MACROS
+%	Size of the box to allign text
+\newlength{\spacebox}
+\settowidth{\spacebox}{123456789}
+
+%	Vertical space separator berween entries
+\newcommand{\sepspace}{\vspace*{1.2em}}
+
+%	Name
+\newcommand{\name}[1]{
+	\Huge	% Font size
+	\fontfamily{phv} \selectfont	% Font Family - Helvetica 
+	\begin{center}\textbf{#1}\end{center}	% Print the name centered and bold
+	\normalsize \normalfont	% Back to normal size and normal font
+}
+
+%	Quality	
+\newcommand{\quality}[1]{
+	\Large
+	\begin{center}\textsc{#1}\end{center}\par
+	\normalsize
+}
+
+%	Personal Information
+\newcommand{\info}[2]{
+	\noindent\hangindent=2em\hangafter=0	% Indentation for personal info
+	\parbox{1.5\spacebox}{
+		\textbf{#1}	% Slanted entry name 
+	}
+	#2 \par	% Entry value
+}
+
+%	Skills
+\newcommand{\skill}[2]{
+	\noindent\hangindent=2em\hangafter=0	% Indentation for personal info
+	\parbox{3\spacebox}{\textsc{#1}}	% Three times larger box
+	#2 \par}	% Entry value
+
+%	Language level
+\newcommand{\lan}[2]{
+	\noindent\hangindent=2em\hangafter=0	% Indentation for personal info
+	\parbox{\spacebox}{\textbf{#1}}		% Bold entry name 
+	#2 \par}	% Entry value
+
+%	Education
+\newcommand{\education}[3]{
+	\noindent \textbf{#1} \par % Name of the studies
+	\noindent\textit{#2} \par	% New paragraph with school in italics
+	\vspace*{0.5em}
+	\noindent\hangindent=2em\hangafter=0 \small #3	% NO hanging and in smaller text
+	\normalsize \par
+}
+
+%	Work Experrience
+\newcommand{\work}[4]{
+	\noindent \textbf{#1} % Name of the work derscription
+	\hfill
+	\framebox{	% Duration of the work in a box
+		\parbox{6em}{
+			\centering\textbf{#2}}} \par
+	\noindent\textit{#3} \par	% New paragraph with work name in italics
+	\vspace*{0.5em}
+	\noindent\hangindent=2em\hangafter=0 \small #4	% NO hanging and in smaller text
+	\normalsize \par
+}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\name{George Papageorgiou}
+\quality{Computer Engineer}
+\sepspace
+
+
+\info{Email:}{\texttt{papageogeo91@gmail.com}}
+\info{Phone:}{\texttt{+306943185516}}
+\info{Birthdate:}{\texttt{28/9/1991}}
+\info{Lives in:}{\texttt{Korinthos,Greece}}
+\info{Military:}{\texttt{No obligation}}
+\info{Github}{\texttt{https://github.com/ramonrulez}}
+
+
+\section*{Work Experience}
+\work{Electronic components assembly specialist}{2019--}{SmartMoto Electronics}{
+	\begin{multicols}{2}
+		[This job has two parts that are repeated every year. The first half of the year there are the manufacturing of the products and in the second half is dedicated to RnD.]\break
+	The manufacturing included:
+	\begin{itemize}
+		\item SMD soldering,
+		\item wiring assemblies,
+		\item assembly of microelectronics,
+		\item processing of aluminum slabs.
+	\end{itemize}
+	\columnbreak
+	
+	The RnD part was different every year. In those periods I worked on:
+	\begin{itemize}[noitemsep]
+		\item developing programs to automate tasks,
+		\item prototyping of electronic circuitry,
+		\item new products,
+		\item assignments for the development of the company.
+	\end{itemize}
+	\end{multicols}
+}
+\sepspace
+
+\work{Technician / Assistant Audio Engineer}{2017--}{Wreck IT Sound Studios / JSA Studios}{
+	\begin{multicols}{2}
+		The main workload of the job included:
+	\begin{itemize}[noitemsep]
+		\item soldering of audio cables,
+		\item repairing of mixing consoles and audio gear,
+		\item guitar maintanance, setup and repair,
+		\item development of audio gear,
+		\item audio engineering,
+		\item recording engineering.
+	\end{itemize}
+	\end{multicols}
+}
+\sepspace
+
+\work{Technician}{2015--2019}{Super TV Peloponnisos}{
+	\begin{multicols}{2}
+		[The work in the TV station included the management of 4 local and peripheral TV stations.]
+	The primary responsibilities was:
+	\begin{itemize}[noitemsep]
+		\item maintaining the programm flow,
+		\item video Editing in Edius,
+		\item camera work, indoors or outdoors.
+	\end{itemize}
+	\columnbreak
+
+	Furthermore sometimes occured jobs like:
+	\begin{itemize}[noitemsep]
+		\item directing LIVE broadcasts and shows,
+		\item sound recording,
+		\item gear maintainance,
+		\item LIVE streaming, Youtube and Facebook.
+	\end{itemize}
+	\end{multicols}
+}
+
+
+\section*{Education}
+\education{Computer Engineering and Informatics Department(CEID)}{University of Patras}{Currently in the phase of dissertation.}
+\sepspace
+\education{High School}{3o High School of Korinthos}{}
+
+
+\section*{Skills}
+\skill{Programming Languages}{\textsl{C/C++, PHP, Javascript, SQL, JAVA}}
+\skill{Scripting}{\textsl{Bash, Python}}
+\skill{Markup}{\textsl{HTML, CSS, }\LaTeX\textsl{ ,XML}}
+\skill{Other}{\textsl{Linux, git}}
+\sepspace
+\skill{Soldering}{\textsl{Through Hole, SMD}}
+\sepspace
+\skill{Guitar Technician}{\textsl{Setup, Maintanance, Live Support}}
+\sepspace
+\skill{Driving Licence}{\textsl{Type B}}
+
+
+\section*{Languages}
+\lan{Greek}{Native}
+\lan{English}{C2}
+
+
+\end{document}
