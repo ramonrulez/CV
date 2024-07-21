@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1721555772.1234 "/home/ramon/Documents/CV/.tex/cv.tex" "cv.pdf" "cv" 1721555772.47707 0
+["pdflatex"] 1721556371.17494 "/home/ramon/Documents/CV/.tex/cv.tex" "cv.pdf" "cv" 1721556371.5208 0
   "/home/ramon/Documents/CV/.tex/cv.tex" 1721555771.94478 5427 92ae53ecb1e47e5e758367e1c3390bd1 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc" 1716849630 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1716849630 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -83,7 +83,7 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1716849630 41588 b43d3e860a4f94167ee1e725ff526a72 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1718019816.91612 5453576 7bdf95cfb24f3b274b33bb1ed455b222 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1721555663 7317144 912b616bbcb7debd983bf19e5e0df0ec ""
-  "cv.aux" 1721555772.41479 112 a79fe896b56b4862b346df1ebf05b16d "pdflatex"
+  "cv.aux" 1721556371.46258 112 a79fe896b56b4862b346df1ebf05b16d "pdflatex"
   "cv.tex" 1721555771.94478 5427 92ae53ecb1e47e5e758367e1c3390bd1 ""
   (generated)
   "cv.aux"
