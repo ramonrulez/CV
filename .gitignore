@@ -1,3 +1,4 @@
-.tex/cv.aux
-.tex/cv.log
+cd.*
+!.tex/cv.tex
+!.tex/cv.pdf
 
