@@ -1,5 +1,9 @@
-\documentclass{article}
+\documentclass[a4paper]{article}
 
+
+
+% DOCUMENT_SETUP
+% -----------------------------------------------------------------------------
 %	Encoding
 \usepackage[utf8]{inputenc}
 
@@ -12,6 +16,7 @@
 %	Font
 %\renewcommand{\familydefault}{\sfdefault}
 %\renewcommand*\sfdefault{phv}
+% \usepackage{inconsolata}
 \usepackage[T1]{fontenc}
 \usepackage{arev}
 
@@ -28,7 +33,8 @@
 	a4paper,
 	left=15mm,
 	right=15mm,
-	top=15mm
+	top=10mm,
+	bottom=10mm
 }
 
 %	Remove page's headers, footers, pagenumbers
@@ -39,206 +45,36 @@
 \sectionfont{
 	\sectionrule{0pt}{0pt}{-5pt}{1pt}
 }
+
 %	List package
 \usepackage{enumitem}
 
 %	Multiple columns
 \usepackage{multicol}
 
+
+% MACROS
 %----------------------------------------------------------------------------------------
+\input{Macros/macros.tex}
 
-%%	MACROS
-%	Size of the box to allign text
-\newlength{\spacebox}
-\settowidth{\spacebox}{123456789}
-
-%	Vertical space separator berween entries
-\newcommand{\sepspace}{\vspace*{1em}}
-
-%	Name
-\newcommand{\name}[1]{
-	\Huge	% Font size
-	\fontfamily{phv} \selectfont	% Font Family - Helvetica 
-	\begin{center}\textbf{#1}\end{center}	% Print the name centered and bold
-	\normalsize \normalfont	% Back to normal size and normal font
-}
-
-%	Quality	
-\newcommand{\quality}[1]{
-	\Large
-	\fontfamily{phv} \selectfont
-	\begin{center}
-		\textsc{#1}
-	\end{center}
-	\par
-	\normalsize 
-	\normalfont
-}
-
-%	Personal Information
-\newcommand{\info}[2]{
-	\noindent
-	\hangindent=2em
-	\hangafter=0	% Indentation for personal info
-	\parbox{1.5\spacebox}{
-		\textbf{#1}	% Slanted entry name 
-	}
-	: #2 \par	% Entry value
-}
-
-\newcommand{\about}[1]{
-	% \normalsize
-	\noindent
-	\textsf{#1}
-}
-
-%	Skills
-\newcommand{\skill}[2]{
-	\noindent\hangindent=2em\hangafter=0	% Indentation for personal info
-	\parbox{3\spacebox}{\textsc{#1}}	% Three times larger box
-	: #2 \par	% Entry value
-	\medskip}	
-
-%	Language level
-\newcommand{\lan}[2]{
-	\noindent\hangindent=2em\hangafter=0	% Indentation for personal info
-	\parbox{1\spacebox}{\textbf{#1}}		% Bold entry name 
-	: #2 \par	% Entry value
-	\medskip}	
-
-%	Education
-\newcommand{\education}[3]{
-	\noindent \textbf{#1} \par % Name of the studies
-	\noindent\textit{#2} \par	% New paragraph with school in italics
-	\vspace*{0.5em}
-	\noindent\hangindent=2em\hangafter=0 \small #3	% NO hanging and in smaller text
-	\normalsize \par
-}
-
-%	Work Experrience
-\newcommand{\work}[4]{
-	\noindent \textbf{#1} % Name of the work derscription
-	\hfill
-	\framebox{	% Duration of the work in a box
-		\parbox{6em}{
-			%\centering\textbf{#2}}} \par
-			\centering{#2}}} \par
-	\noindent\textit{#3} \par	% New paragraph with work name in italics
-	\vspace*{0.5em}
-	\noindent\hangindent=2em\hangafter=0 \small #4	% NO hanging and in smaller text
-	\normalsize \par
-}
-
+% MAIN_DOCUMENT
 %----------------------------------------------------------------------------------------
-
 \begin{document}
 
-	\name{George Papageorgiou}
-	\quality{Computer Engineer}
-	\bigskip
-
-	\info{Email}{\href{mailto:papageogeo91@gmail.com}{papageogeo91@gmail.com}}
-	\info{Phone}{\texttt{+306943185516}}
-	\info{Birthdate}{\texttt{28/9/1991}}
-	\info{Lives in}{\texttt{Korinthos,Greece}}
-	\info{Military}{\texttt{No obligation}}
-	\info{Github}{\url{https://github.com/ramonrulez}}
-	\bigskip
-
-	\about{
-		I am Computer Engineer with passion for software development. My background in various technical fields equipped me with problem-solving skills, adaptive reflexes and a holistic approach in technical problems.
-	I am currently working in my dissertation in Computer Engineering and looking for ways to leverage my skills and gain more knowledge in the field of Software Development.
-	}
-	\section*{Work Experience}
-	\work{Electronic components assembly specialist / RnD specialist}{2019--2024}{\href{https://smartmoto-electronics.com/}{SmartMoto Electronics}}{
-		\begin{center}
-			My job was to develop and manufacture electronics for motorbikes.
-		\end{center}
-		\begin{multicols}{2}	
-			The manufacturing included:
-			\begin{itemize}[noitemsep]
-				\item SMD soldering,
-				\item wiring looms and accesorries,
-				\item assembly of microelectronics,
-				\item processing of aluminum slabs.
-			\end{itemize}
-			\columnbreak
-			
-			The development part included:
-			\begin{itemize}[noitemsep]
-				\item developing software to automate tasks,
-				\item prototyping of electronic circuitry,
-				\item new products prototyping,
-				\item assignments for the development of the company.
-				\item AVR microcontrollers prototyping
-			\end{itemize}
-		\end{multicols}
-	}
-	\sepspace
-
-	\work{Technician / Assistant Audio Engineer}{2017--}{\href{https://www.wreckitsoundstudios.com/}{Wreck IT Sound Studios}}{
-		\begin{center}
-			The purpose of the job was to care for the technical function of the studio
-		\end{center}
-		\begin{multicols}{2}
-			The main workload of the job included:
-			\begin{itemize}[noitemsep]
-				\item cable soldering,
-				\item repairing mixing consoles and audio gear,
-				\item guitar maintanance, setup and repair,
-				\item development of audio gear,
-				\item audio engineering,
-				\item recording engineering.
-			\end{itemize}
-		\end{multicols}
-	}
-	\sepspace
-
-	\work{Technician}{2015--2019}{\href{https://supertvkorinthos.gr/}{Super TV Korinthos}}{
-		\begin{center}
-			The work in the TV station included the management of 4 local and peripheral TV stations.
-		\end{center}
-		\begin{multicols}{2}
-			The primary responsibilities was:
-			\begin{itemize}[noitemsep]
-				\item maintaining the programm flow,
-				\item video Editing in Edius,
-				\item camera work, indoors or outdoors.
-			\end{itemize}
-		\columnbreak
-
-		Furthermore sometimes occured tasks like:
-		\begin{itemize}[noitemsep]
-			\item directing LIVE broadcasts and shows,
-			\item sound recording,
-			\item gear maintainance,
-			\item LIVE streaming on Youtube and Facebook.
-		\end{itemize}
-		\end{multicols}
-	}
-
-	% Break until next page for the rest
-	\pagebreak
-
-	\section*{Education}
-	\education{Computer Engineering and Informatics Department(CEID)}{University of Patras}{Currently in the phase of dissertation.}
-	\sepspace
-	\education{High School}{3o High School of Korinthos}{}
-
-
-		\section*{Skills}
-			\skill{Programming Languages}{\textsl{C/C++, PHP, Javascript, SQL, JAVA, MATLAB}}
-			\skill{Scripting}{\textsl{Bash, Python}}
-			\skill{Markup}{\textsl{HTML, CSS, }\LaTeX\textsl{ ,XML}}
-			\skill{Other}{\textsl{Linux, git}}
-			\skill{Soldering}{\textsl{Through Hole, SMD}}
-			\skill{Guitar Technician}{\textsl{Setup, Maintanance, Live Support}}
-			\skill{Soft Skills}{\textsl{Problem Solving, Organization, Adaptability, Creativity, Diligence}}
-			\skill{Driving Licence}{\textsl{Type B}}
-			
-		\section*{Languages}
-			\lan{Greek}{Native}
-			\lan{English}{C2}
-
+	\input{Name_Quality/name_quality.tex}
+	\vspace{\baselineskip}
+	\input{Info/info.tex}
+	\vspace{\baselineskip}
+	\input{About/about.tex}
+	\medskip
+	
+	\begin{multicols}{2}
+		\input{Work_Experience/work_experience.tex}
+		\vspace{50pt}
+		\input{Skills/skills.tex}
+		\input{Education/education.tex}
+		\input{Languages/languages.tex}
+		
+	\end{multicols}
 
 \end{document}

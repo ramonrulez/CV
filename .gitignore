@@ -3,3 +3,13 @@
 !/.tex/cv.pdf
 about.txt
 /Cover_letter/
+/.tex.backup/
+.gitignore
+!/.tex/About/
+!/.tex/Education/
+!/.tex/Info/
+!/.tex/Languages/
+!/.tex/Macros/
+!/.tex/Name_Quality/
+!/.tex/Skills/
+!/.tex/Work_Experience/
