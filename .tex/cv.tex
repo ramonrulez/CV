@@ -1,33 +1,54 @@
 \documentclass[a4paper]{article}
 
-
-
-% DOCUMENT_SETUP
+% 	DOCUMENT_SETUP
 % -----------------------------------------------------------------------------
-%	Encoding
+%%%	Encoding
 \usepackage[utf8]{inputenc}
 
-%	Language
+%%%	Language
 \usepackage[english]{babel}
 
-%	Blindtext
+%%%	Generates a paragraph of text
 \usepackage{blindtext}
 
-%	Font
-%\renewcommand{\familydefault}{\sfdefault}
-%\renewcommand*\sfdefault{phv}
+%%%	Font
+% 	Fonts
+%	Sans Serif Fonts
+% \usepackage{mathptmx}
+% \usepackage{helvet}
+% \usepackage[defaultsans]{droidsans}
+\usepackage{lmodern}
+%	Typewriter Fonts
 % \usepackage{inconsolata}
-\usepackage[T1]{fontenc}
-\usepackage{arev}
+%	Special Fonts
+\usepackage{fontawesome5}
 
-% Links
+%%	Default Font Family 
+% 	Serif
+% \renewcommand*\rmdefault{cmfib}
+% 	Sans Serif
+\renewcommand*\familydefault{\sfdefault}
+%	Typewriter
+% \renewcommand*\familydefault{\ttdefault}
+
+%% Font Encoding
+\usepackage[T1]{fontenc}
+% \usepackage{lmodern}
+
+%%%	Colors
+\usepackage{xcolor}
+\definecolor{color1}{RGB}{186, 186, 186}
+\definecolor{color2}{RGB}{168, 168, 168}
+\definecolor{color3}{RGB}{135, 135, 135}
+
+%%% Links
 \usepackage{hyperref}
 \hypersetup{
 	colorlinks = true,
-	urlcolor = blue,
+	urlcolor = color2,
 }
 
-%	Layout
+%%%	Layout
 \usepackage{geometry}
 \geometry{
 	a4paper,
@@ -36,45 +57,72 @@
 	top=10mm,
 	bottom=10mm
 }
-
-%	Remove page's headers, footers, pagenumbers
+%	Remove page's headers, footers, page numbers
 \pagestyle{empty}
 
-%	Custom section's style
+%%%	Custom section's style
 \usepackage{sectsty}
 \sectionfont{
 	\sectionrule{0pt}{0pt}{-5pt}{1pt}
 }
 
-%	List package
+%%%	Boxes
+% \usepackage{tikz,lipsum,lmodern}
+\usepackage{tcolorbox}
+% Familiar With Box Settings
+\newtcbox{\familiarWithBox}{ 
+    nobeforeafter,
+    size=title,
+    colframe=color3,
+    colback=color3,
+	coltext=white,
+    arc=4pt,
+    sharp corners=southwest,
+	box align=center,
+	height=6mm,
+	capture=hbox
+}
+% Soft Skills Box Settings
+\newtcbox{\softSkillBox}{ 
+    nobeforeafter,
+    size=title,
+    colback=white,
+	boxrule=0.5pt,
+    arc=4pt,
+    sharp corners=southwest,
+	box align=center,
+	height=6mm,
+}
+%%%	List package
 \usepackage{enumitem}
+% Itemization symbol
+\setitemize[1]{label=-}
 
-%	Multiple columns
+%%%	Multiple columns
 \usepackage{multicol}
 
-
-% MACROS
+%	MACROS
 %----------------------------------------------------------------------------------------
 \input{Macros/macros.tex}
 
-% MAIN_DOCUMENT
+%	MAIN_DOCUMENT
 %----------------------------------------------------------------------------------------
 \begin{document}
 
-	\input{Name_Quality/name_quality.tex}
-	\vspace{\baselineskip}
-	\input{Info/info.tex}
-	\vspace{\baselineskip}
-	\input{About/about.tex}
+	\name{Georgios Papageorgiou}
+	\input{Quality_About/about_SoftwareEngineer.tex}
 	\medskip
-	
+
 	\begin{multicols}{2}
-		\input{Work_Experience/work_experience.tex}
-		\vspace{50pt}
-		\input{Skills/skills.tex}
 		\input{Education/education.tex}
+		\input{Work_Experience/workExperience.tex}
+		% \vspace{50pt}
+		\input{Skills/skills.tex}
+		\input{Familiar_With/familiarWith.tex}
+		\input{Soft_Skills/softSkills.tex}
 		\input{Languages/languages.tex}
-		
+		\input{Interests/interests.tex}		
 	\end{multicols}
+
 
 \end{document}
