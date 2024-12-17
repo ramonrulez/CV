@@ -16,8 +16,8 @@
 %	Sans Serif Fonts
 % \usepackage{mathptmx}
 % \usepackage{helvet}
-% \usepackage[defaultsans]{droidsans}
-\usepackage{lmodern}
+\usepackage[defaultsans]{droidsans}
+% \usepackage{lmodern}
 %	Typewriter Fonts
 % \usepackage{inconsolata}
 %	Special Fonts
@@ -45,7 +45,7 @@
 \usepackage{hyperref}
 \hypersetup{
 	colorlinks = true,
-	urlcolor = color2,
+	urlcolor = color3,
 }
 
 %%%	Layout
@@ -77,7 +77,6 @@
     colback=color3,
 	coltext=white,
     arc=4pt,
-    sharp corners=southwest,
 	box align=center,
 	height=6mm,
 	capture=hbox
@@ -89,7 +88,6 @@
     colback=white,
 	boxrule=0.5pt,
     arc=4pt,
-    sharp corners=southwest,
 	box align=center,
 	height=6mm,
 }
@@ -108,7 +106,6 @@
 %	MAIN_DOCUMENT
 %----------------------------------------------------------------------------------------
 \begin{document}
-
 	\name{Georgios Papageorgiou}
 	\input{Quality_About/about_SoftwareEngineer.tex}
 	\medskip
@@ -116,13 +113,10 @@
 	\begin{multicols}{2}
 		\input{Education/education.tex}
 		\input{Work_Experience/workExperience.tex}
-		% \vspace{50pt}
 		\input{Skills/skills.tex}
 		\input{Familiar_With/familiarWith.tex}
 		\input{Soft_Skills/softSkills.tex}
 		\input{Languages/languages.tex}
 		\input{Interests/interests.tex}		
 	\end{multicols}
-
-
 \end{document}
