@@ -20,4 +20,4 @@ The sections are:
 Notes
 -----
 1. The Macros folder includes the macros.tex file that is used to configure the look of each section.
-1. The Quality_About folder includes the about_template that can be changed to fit ypur needs. If you want to apply for different roles, change the role, write an about section for each role and just include it in the cv.tex file.
+1. The Quality_About folder includes the about_template that can be changed to fit your needs. If you want to apply for different roles, change the role, write an about section for each role and just include it in the cv.tex file.
