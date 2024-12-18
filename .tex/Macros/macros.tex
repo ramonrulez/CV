@@ -1,0 +1,120 @@
+%	Size of the box to align text
+\newlength{\spacebox}
+\settowidth{\spacebox}{123456789}
+
+%	Vertical space separator between entries
+\newcommand{\sepspace}{\vspace*{1em}}
+
+
+%%%----------------------------------------------------------------------------
+%	Name
+\newcommand{\name}[1]{
+	% Font Family - Helvetica 
+	% \fontfamily{phv} \selectfont	
+	% Print the name centered and bold
+	\begin{center}
+		{\Huge{\textbf{#1}}}
+	\end{center}
+	% Back to normal size and normal font
+	% \normalfont	
+}
+
+%	Quality	
+\newcommand{\quality}[1]{
+	% \fontfamily{phv} \selectfont
+	\begin{center}
+		{\LARGE{\textsf{#1}}}
+		% {\textsl{#1}}
+	\end{center}
+	% \normalfont
+}
+
+%	Personal Information
+\newcommand{\info}[2]{
+	\noindent
+	% Entry name 
+	% for icons
+	\raisebox{-1pt}{\makebox[10mm]{\large{#1}}}
+	% for text
+	% \parbox{\spacebox}{\textbf{#1}}
+	% Entry value
+	 #2 \par
+	\vspace{1mm}
+}
+
+% 	About section
+\newcommand{\about}[1]{
+	\textsf{#1} \par
+}
+
+% 	Technical Skills
+\newcommand{\skill}[2]{
+	% Category of skills
+	\noindent
+	\textbf{#1} :\\	
+	% Skill value
+	\indent
+	\textsl{#2} \par	
+}	
+
+%	Familiar with
+\newcommand{\familiarWith}[1]{
+	\familiarWithBox{#1}
+}
+
+% 	Soft Skills 
+\newcommand{\softSkill}[1]{
+	\softSkillBox{#1}
+}
+
+%	Language level
+\newcommand{\lan}[2]{
+	\noindent
+	% Bold Language entry name 
+	\parbox{\spacebox}{\textbf{#1}}
+	% Entry value
+	: #2 \par	
+}	
+
+%	Education
+\newcommand{\education}[4]{
+	\noindent
+	% \hangindent=2em\hangafter=0 
+	% Name of the studies
+	\textbf{#1} \\
+	% New paragraph with school in italics
+	\textit{#2} \hfill
+	\framebox{\parbox{6em}{\centering{#3}}} \par
+	% \vspace*{0.5em}
+	% NO hanging and in smaller text
+	\noindent \hangindent=6em \hangafter=0 
+	% \begin{center}
+	{\centering {\footnotesize #4}}
+	% \end{center}
+	 \par
+}
+
+%	Work Experience
+\newcommand{\work}[5]{
+	% Work derscription
+	\noindent 
+	\textbf{#1}
+	\hfill 
+	% Duration of the work
+	\framebox{\parbox{6em}{\centering{#2}}} \par
+	% Company name
+	\noindent
+	\textit{#3} \par	
+	% Job description
+	\noindent\hangindent=2em\hangafter=0 
+	{\footnotesize {\centering #4}} \par 
+	% Job Tasks
+	\begin{itemize}[noitemsep]
+	{\small #5 }
+	\end{itemize} \par
+}
+
+%	Interests
+\newcommand{\interest}[1]{
+	\makebox[10mm]{\textcolor{color1}{\LARGE{#1}}}
+}
