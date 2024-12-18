@@ -7,10 +7,11 @@ Sections
 --------
 The sections can be put at any way you want just by changing the order in the cv.tex.
 
+The sections are:
 - Info
 - About
-- Work Experience
 - Education
+- Work Experience
 - Skills (for hard Skills)
 - Soft Skills
 - Familiar with (for technologies or subjects you are familiar with)
@@ -18,6 +19,5 @@ The sections can be put at any way you want just by changing the order in the cv
 
 Notes
 -----
-1. The Macros folder includes all the macros that used to configure how each section looks like.
-1. The Quality_About folder includes a template to change the quality you need and the corresponding about section. 
-
+1. The Macros folder includes the macros.tex file that is used to configure the look of each section.
+1. The Quality_About folder includes the about_template that can be changed to fit ypur needs. If you want to apply for different roles, change the role, write an about section for each role and just include it in the cv.tex file.
