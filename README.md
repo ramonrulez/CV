@@ -17,6 +17,10 @@ The sections are:
 - Familiar with (for technologies or subjects you are familiar with)
 - Interests
 
+Cover Letter
+------------
+I included a cover letter template. The file is self contained. You include your information (the \info command looks at the already filled in information in the \Info directory and includes it automatically), you compile it and you are golden.
+
 Notes
 -----
 1. The Macros folder includes the macros.tex file that is used to configure the look of each section.

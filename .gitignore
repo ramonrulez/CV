@@ -3,4 +3,6 @@
 !/.tex/cv.tex
 !/.tex/cv.pdf
 test_tex/
-Cover_letters/
+Cover_letters/**
+!Cover_letters/Template/
+!**/template_coverLetter.tex

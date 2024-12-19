@@ -1,0 +1,133 @@
+\documentclass[a4paper]{article}
+
+% 	DOCUMENT_SETUP
+% -----------------------------------------------------------------------------
+%%%	Encoding
+\usepackage[utf8]{inputenc}
+
+%%%	Language
+\usepackage[english]{babel}
+
+%%%	Generates a paragraph of text
+\usepackage{blindtext}
+
+%%%	Font
+% 	Fonts
+%	Sans Serif Fonts
+% \usepackage{mathptmx}
+% \usepackage{helvet}
+\usepackage[defaultsans]{droidsans}
+% \usepackage{lmodern}
+%	Typewriter Fonts
+% \usepackage{inconsolata}
+%	Special Fonts
+\usepackage{fontawesome5}
+
+%%	Default Font Family 
+% 	Serif
+% \renewcommand*\rmdefault{cmfib}
+% 	Sans Serif
+\renewcommand*\familydefault{\sfdefault}
+%	Typewriter
+% \renewcommand*\familydefault{\ttdefault}
+
+%% Font Encoding
+\usepackage[T1]{fontenc}
+% \usepackage{lmodern}
+
+%%%	Colors
+\usepackage{xcolor}
+\definecolor{color1}{RGB}{186, 186, 186}
+\definecolor{color2}{RGB}{168, 168, 168}
+\definecolor{color3}{RGB}{135, 135, 135}
+
+%%% Links
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks = true,
+	urlcolor = color3,
+}
+
+%%%	Layout
+\usepackage{geometry}
+\geometry{
+	a4paper,
+	left=20mm,
+	right=20mm,
+	top=20mm,
+	bottom=10mm
+}
+%	Remove page's headers, footers, page numbers
+\pagestyle{empty}
+
+%%%	Custom section's style
+\usepackage{sectsty}
+\sectionfont{
+	\sectionrule{0pt}{0pt}{-5pt}{1pt}
+}
+
+%	MACROS
+%----------------------------------------------------------------------------------------
+
+%	Name
+\newcommand{\name}[1]{
+	% Font Family - Helvetica 
+	% \fontfamily{phv} \selectfont	
+	% Print the name centered and bold
+	\begin{flushleft}
+		{\Huge{\textbf{#1}}}
+	\end{flushleft}
+	% Back to normal size and normal font
+	% \normalfont	
+}
+
+%	Quality	
+\newcommand{\quality}[1]{
+	% \fontfamily{phv} \selectfont
+	\begin{flushleft}
+		{\Large{\textcolor{color2}{\textsf{#1}}}}
+		% {\textsl{#1}}
+	\end{flushleft}
+	% \normalfont
+}
+
+%	Personal Information
+\newcommand{\info}[2]{
+	\noindent
+	% Entry name 
+	% for icons
+	\raisebox{-1pt}{\makebox[8mm]{\large{#1}}}
+	% for text
+	% \parbox{\spacebox}{\textbf{#1}}
+	% Entry value
+	 #2 \par
+	\vspace{1mm}
+}
+
+\newcommand{\about}[1]{
+	\textsf{#1} \par
+}
+
+%	MAIN_DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+	\name{Georgios Papageorgiou}
+	\vspace{-18pt}
+
+	\quality{}
+	\medskip
+	
+	\input{../../.tex/Info/info.tex}
+	\bigskip
+
+	\noindent
+	% Dear Mr. or Ms. <Last Name> \\
+	
+	\par
+	\blindtest \\
+	
+	\noindent
+	Thank you for your consideration
+
+
+\end{document}
